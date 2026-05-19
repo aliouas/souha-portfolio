@@ -1,8 +1,29 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Mail, MapPin, Linkedin, Github, ExternalLink, Database, BarChart3, Globe2, Code2, BriefcaseBusiness, FileText } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Mail, MapPin, ExternalLink, Database, BarChart3, Globe2, Code2, BriefcaseBusiness, FileText } from "lucide-react";
+
+function Card({ className = "", children }) {
+  return <div className={className}>{children}</div>;
+}
+
+function CardContent({ className = "", children }) {
+  return <div className={className}>{children}</div>;
+}
+
+function Button({ asChild, variant, className = "", children }) {
+  const base =
+    variant === "outline"
+      ? "inline-flex items-center justify-center border border-slate-300 bg-white text-slate-950 hover:bg-slate-100"
+      : "inline-flex items-center justify-center bg-slate-950 text-white hover:bg-slate-800";
+
+  if (asChild) {
+    return React.cloneElement(children, {
+      className: `${base} ${className} ${children.props.className || ""}`,
+    });
+  }
+
+  return <button className={`${base} ${className}`}>{children}</button>;
+}
 
 const projects = [
   {
@@ -317,12 +338,12 @@ export default function PortfolioWebsite() {
           </Button>
           <Button asChild variant="outline" className="rounded-2xl px-5 py-6">
             <a href="https://github.com/aliouas" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2">
-              <Github className="h-4 w-4" /> GitHub
+              <ExternalLink className="h-4 w-4" /> GitHub
             </a>
           </Button>
           <Button asChild variant="outline" className="rounded-2xl px-5 py-6">
             <a href="https://www.linkedin.com/in/souha-alioua/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2">
-              <Linkedin className="h-4 w-4" /> LinkedIn
+              <ExternalLink className="h-4 w-4" /> LinkedIn
             </a>
           </Button>
         </div>
