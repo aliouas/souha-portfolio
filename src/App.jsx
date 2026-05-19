@@ -27,41 +27,51 @@ function Button({ asChild, variant, className = "", children }) {
 
 const projects = [
   {
-    title: "Educational Attainment & Well-Being in Maryland",
-    type: "Data Story / Interactive Report",
+    title: "HR Analytics & Attrition Insights Dashboard",
+    type: "Personal Project · Data Analysis / Tableau Dashboard",
     description:
-      "County-level analysis examining how educational attainment relates to income, poverty, housing, health, and labor-market outcomes across Maryland.",
-    tools: ["Python", "Pandas", "Plotly", "HTML/CSS/JS", "ACS", "GeoJSON"],
+      "Processed and analyzed a 1,400+ employee dataset to track workforce KPIs, segment employee groups, and identify attrition patterns across department, age, gender, and education.",
+    tools: ["Python", "Pandas", "Tableau", "HR Analytics", "KPI Tracking", "Data Cleaning"],
+    highlights: [
+      "Created structured features for workforce segmentation and KPI tracking.",
+      "Designed an interactive Tableau dashboard with filters and drilldowns.",
+      "Delivered insights on key drivers of employee attrition to support HR decision-making.",
+    ],
     links: [
-      { label: "Live Demo", href: "https://educational-attainment-1198bd.gitlab.io/" },
+      { label: "View Project", href: "https://public.tableau.com/app/profile/souha.alioua/viz/HRDashboard_17375878455630/HRAnalyticsDashboard" },
+    ],
+  },
+  {
+    title: "BookScrape: Book Ratings & Trends Analysis Tool",
+    type: "Dickinson College Capstone · Data Analysis / Developer Project",
+    description:
+      "Built a web-scraping and analysis workflow using Goodreads book data to explore rating and review trends across genres.",
+    tools: ["Python", "Web Scraping", "Pandas", "Power BI", "Data Cleaning", "Trend Analysis"],
+    highlights: [
+      "Scraped 1,500+ book records while handling dynamic content and pagination.",
+      "Cleaned and standardized raw scraped data into analysis-ready datasets.",
+      "Built Power BI visualizations to identify trends in ratings and reviews across genres.",
+    ],
+    links: [
+      { label: "GitHub", href: "https://github.com/aliouas/bookscrape-trends" },
+      { label: "Power BI", href: "https://app.powerbi.com/view?r=eyJrIjoiM2ExZjhlMzUtN2EyZS00MTI3LWIzODYtOGM4N2FjNTk0NjAzIiwidCI6ImE1ZjQ2NGNmLWY4NjUtNGE2Mi04YzQzLTU0YTVjZWJjYmViNiJ9" },
     ],
   },
   {
     title: "Math Graduates Dashboard",
-    type: "Tableau Dashboard",
+    type: "Data Analysis / Tableau Dashboard",
     description:
-      "Interactive Tableau dashboard exploring the geography, labor-market outcomes, and occupational patterns of mathematics and statistics graduates.",
-    tools: ["SQL", "Tableau", "IPUMS", "Data Cleaning", "Dashboard Design"],
-    links: [
-      { label: "Tableau", href: "https://public.tableau.com/app/profile/souha.alioua/viz/MathGraduatesDashboard/Overview" },
-      { label: "GitHub", href: "https://github.com/aliouas/math-graduates" },
+      "Analyzed math and statistics graduates across the United States, focusing on geographic concentration, employment outcomes, wages, and occupational patterns.",
+    tools: ["SQL", "Python", "Tableau", "IPUMS", "Data Cleaning", "Dashboard Design"],
+    highlights: [
+      "Built SQL queries to calculate graduate counts, math graduate share, employment outcomes, and wage patterns.",
+      "Created an interactive Tableau dashboard to compare states and explore labor-market outcomes.",
+      "Documented the project in GitHub with methodology, data processing steps, and dashboard links.",
     ],
-  },
-  {
-    title: "Maryland Regional Economic Breakdown",
-    type: "Web App / Data Visualization",
-    description:
-      "Regional economic data application with interactive maps, sortable tables, county-level drilldowns, and industry/sub-industry exploration.",
-    tools: ["Python", "JavaScript", "Plotly", "QCEW", "GeoJSON", "HTML/CSS"],
-    links: [],
-  },
-  {
-    title: "Mindnest Coaching Module",
-    type: "Full-Stack Application",
-    description:
-      "Mental-health coaching module with coaching plans, exercises, progress tracking, favorites, translation support, and dashboard views.",
-    tools: ["Java", "JavaFX", "Symfony", "Doctrine", "MySQL", "FXML"],
-    links: [],
+    links: [
+      { label: "GitHub", href: "https://github.com/aliouas/math-graduates" },
+      { label: "Tableau", href: "https://public.tableau.com/app/profile/souha.alioua/viz/MathGraduatesDashboard/Overview" },
+    ],
   },
 ];
 
@@ -84,7 +94,7 @@ const skills = [
   {
     category: "Software & Web",
     icon: Code2,
-    items: ["HTML", "CSS", "JavaScript", "Java", "Symfony", "Git/GitLab", "GitHub"],
+    items: ["HTML", "CSS", "JavaScript", "Java", "Git/GitLab", "GitHub"],
   },
 ];
 
@@ -138,6 +148,16 @@ function ProjectCard({ project, index }) {
             <Database className="h-5 w-5 shrink-0 text-slate-400" />
           </div>
           <p className="text-sm leading-6 text-slate-600">{project.description}</p>
+          {project.highlights && (
+            <ul className="mt-4 space-y-2 text-sm leading-6 text-slate-600">
+              {project.highlights.map((highlight) => (
+                <li key={highlight} className="flex gap-3">
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-slate-400" />
+                  <span>{highlight}</span>
+                </li>
+              ))}
+            </ul>
+          )}
           <div className="mt-5 flex flex-wrap gap-2">
             {project.tools.map((tool) => (
               <span key={tool} className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700">
@@ -191,21 +211,27 @@ export default function PortfolioWebsite() {
             Data Analyst · GIS · Public Data · Web Visualization
           </p>
           <h1 className="text-4xl font-black tracking-tight text-slate-950 md:text-6xl">
-            I turn public data into clear, usable, and interactive insight.
+            I turn messy datasets into dashboards, workflows, and insights people can actually use.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-            I’m Souha Alioua, a data analyst focused on demographic, economic, GIS, and public-sector data. I build workflows, dashboards, maps, and web-based reports that help people understand patterns, validate decisions, and communicate findings clearly.
+            I’m Souha Alioua, a data analyst with experience in Python, SQL, Tableau, Power BI, GIS, and web-based visualization. My work combines data cleaning, workflow automation, dashboard design, and analysis to help teams explore patterns, answer practical questions, and communicate results clearly.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button asChild className="rounded-2xl px-5 py-6">
               <a href="#projects">View Projects</a>
             </Button>
+
+            <Button asChild variant="outline" className="rounded-2xl px-5 py-6">
+              <a href="/souha-portfolio/Souha_Alioua_Resume.pdf" target="_blank" rel="noreferrer">
+                Download Resume
+              </a>
+            </Button>
+
             <Button asChild variant="outline" className="rounded-2xl px-5 py-6">
               <a href="#contact">Contact Me</a>
             </Button>
           </div>
         </motion.div>
-
         <motion.div
           initial={{ opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -214,17 +240,17 @@ export default function PortfolioWebsite() {
           <Card className="rounded-3xl border-slate-200 bg-white shadow-sm">
             <CardContent className="p-7">
               <div className="mb-6 rounded-2xl bg-slate-950 p-5 text-white">
-                <p className="text-sm text-slate-300">Current focus</p>
-                <p className="mt-2 text-2xl font-bold">Public data products for Maryland</p>
+                <p className="text-sm text-slate-300">Core focus</p>
+                <p className="mt-2 text-2xl font-bold">Data products that turn complex information into clear decisions</p>
               </div>
               <div className="space-y-5">
                 <div>
                   <p className="text-sm font-semibold text-slate-500">Strength</p>
-                  <p className="mt-1 text-slate-900">Connecting data cleaning, analysis, GIS, visualization, and written interpretation.</p>
+                  <p className="mt-1 text-slate-900">Building the full path from raw data to analysis, visualization, and stakeholder-ready interpretation.</p>
                 </div>
                 <div>
                   <p className="text-sm font-semibold text-slate-500">Best fit</p>
-                  <p className="mt-1 text-slate-900">Data analyst, BI analyst, GIS/data visualization, research analyst, or public-sector analytics roles.</p>
+                  <p className="mt-1 text-slate-900">Data analysis, BI, GIS/data visualization, research analytics, junior data engineering, and applied data science roles.</p>
                 </div>
                 <div>
                   <p className="text-sm font-semibold text-slate-500">Tools</p>
@@ -253,7 +279,7 @@ export default function PortfolioWebsite() {
         <SectionHeader
           eyebrow="Capabilities"
           title="A practical toolkit for data-heavy work"
-          description="My strongest work sits at the intersection of data preparation, public datasets, visualization, GIS, and stakeholder-facing communication."
+          description="My strongest work sits at the intersection of data preparation, analysis, visualization, GIS, and stakeholder-facing communication."
         />
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {skills.map((group) => {
