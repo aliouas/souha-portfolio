@@ -147,6 +147,8 @@ function ProjectCard({ project }) {
                   <a
                     key={link.label}
                     href={link.href}
+                    data-analytics={`project-${project.number}`}
+                    data-analytics-type="project"
                     target="_blank"
                     rel="noreferrer"
                     className="inline-flex items-center gap-1.5 text-sm font-bold text-slate-950 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-slate-950"
@@ -194,13 +196,13 @@ export default function PortfolioWebsite() {
               I’m Souha Alioua, a data analyst working across Python, SQL, GIS, and web visualization. I turn complex demographic and economic data into validated pipelines, accessible analysis, and public-facing data products.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
-              <Button><a href="#projects">Explore my work <ArrowRight className="h-4 w-4" aria-hidden="true" /></a></Button>
+              <Button><a href="#projects" data-analytics="hero-explore-work">Explore my work <ArrowRight className="h-4 w-4" aria-hidden="true" /></a></Button>
               <Button variant="outline">
-                <a href="/souha-portfolio/resume.pdf" target="_blank" rel="noreferrer">
+                <a href="/souha-portfolio/resume.pdf" target="_blank" rel="noreferrer" data-analytics="hero-resume" data-analytics-type="download">
                   <FileText className="h-4 w-4" aria-hidden="true" /> Resume
                 </a>
               </Button>
-              <Button variant="outline"><a href="#contact">Contact me</a></Button>
+              <Button variant="outline"><a href="#contact" data-analytics="hero-contact">Contact me</a></Button>
             </div>
           </div>
 
@@ -281,9 +283,9 @@ export default function PortfolioWebsite() {
             description="I’m interested in data analysis, BI, GIS and visualization, research analytics, data-product, and applied data-engineering opportunities."
           />
           <div className="flex flex-wrap gap-3">
-            <Button><a href="mailto:souhaalioua2@gmail.com"><Mail className="h-4 w-4" aria-hidden="true" /> Email me</a></Button>
-            <Button variant="outline"><a href="https://github.com/aliouas" target="_blank" rel="noreferrer"><ExternalLink className="h-4 w-4" aria-hidden="true" /> GitHub</a></Button>
-            <Button variant="outline"><a href="https://www.linkedin.com/in/souha-alioua/" target="_blank" rel="noreferrer"><ExternalLink className="h-4 w-4" aria-hidden="true" /> LinkedIn</a></Button>
+            <Button><a href="mailto:souhaalioua2@gmail.com" data-analytics="contact-email" data-analytics-type="contact"><Mail className="h-4 w-4" aria-hidden="true" /> Email me</a></Button>
+            <Button variant="outline"><a href="https://github.com/aliouas" target="_blank" rel="noreferrer" data-analytics="contact-github" data-analytics-type="social"><ExternalLink className="h-4 w-4" aria-hidden="true" /> GitHub</a></Button>
+            <Button variant="outline"><a href="https://www.linkedin.com/in/souha-alioua/" target="_blank" rel="noreferrer" data-analytics="contact-linkedin" data-analytics-type="social"><ExternalLink className="h-4 w-4" aria-hidden="true" /> LinkedIn</a></Button>
           </div>
         </section>
       </main>
@@ -297,4 +299,3 @@ export default function PortfolioWebsite() {
     </div>
   );
 }
-

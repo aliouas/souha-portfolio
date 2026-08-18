@@ -1,4 +1,21 @@
-# React + Vite
+# Souha Alioua Portfolio
+
+## Analytics
+
+Production builds support Google Analytics 4 page-view and CTA click tracking. Analytics is disabled in development, when Do Not Track is enabled, or when no valid measurement ID is configured.
+
+1. Create a GA4 property and web data stream for the portfolio URL.
+2. Copy `.env.example` to `.env.production`.
+3. Replace `G-XXXXXXXXXX` with the stream's Measurement ID.
+4. Run `npm run deploy`.
+
+Tracked clicks use the `link_click` event with non-personal `link_id` and `link_type` parameters. To track another link, add `data-analytics="unique-name"` and, optionally, `data-analytics-type="category"` to it. Never put a visitor's name, email address, or other personal data in these attributes.
+
+In GA4, page views appear under **Reports → Engagement → Pages and screens**. Click events appear under **Reports → Engagement → Events**; Realtime and DebugView are useful for validating a deployment.
+
+If your visitors are covered by laws that require consent for analytics cookies, add a consent banner and update the privacy notice before enabling the measurement ID.
+
+## Development
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
