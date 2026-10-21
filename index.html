@@ -5,9 +5,197 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Souha Alioua | Data Analyst & Data Product Developer</title>
     <meta name="description" content="Portfolio of Souha Alioua, a data analyst building reliable data workflows, public-data analysis, GIS products, and interactive visualizations." />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#0b1120" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <div class="page">
+      <header class="site-header">
+        <a href="#top" class="brand"><span class="brand-mark" aria-hidden="true">SA</span>Souha Alioua</a>
+        <nav aria-label="Primary navigation">
+          <a href="#work">Work</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+
+      <main id="main-content">
+        <section id="top" class="intro">
+          <svg class="hero-motif" viewBox="0 0 520 360" aria-hidden="true" focusable="false">
+            <defs>
+              <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+                <path d="M24 0 H0 V24" class="motif-grid" />
+              </pattern>
+            </defs>
+            <rect width="520" height="360" fill="url(#grid)" />
+            <path d="M40 20 V300 H500" class="motif-axis" />
+            <path d="M204 300 L204 172.6 L212 154.6 L220 137.3 L228 121.6 L236 108.4 L244 98.4 L252 92.1 L260 90.0 L268 92.1 L276 98.4 L284 108.4 L292 121.6 L300 137.3 L308 154.6 L316 172.6 L316 300 Z" class="motif-area" />
+            <path d="M40 291.3 L48 289.5 L56 287.5 L64 285.1 L72 282.4 L80 279.3 L88 275.9 L96 272.1 L104 268.0 L112 263.4 L120 258.6 L128 253.4 L136 247.9 L144 242.2 L152 236.3 L160 230.2 L168 224.2 L176 218.2 L184 212.3 L192 206.6 L200 201.3 L208 196.4 L216 192.0 L224 188.1 L232 185.0 L240 182.6 L248 180.9 L256 180.1 L264 180.1 L272 180.9 L280 182.6 L288 185.0 L296 188.1 L304 192.0 L312 196.4 L320 201.3 L328 206.6 L336 212.3 L344 218.2 L352 224.2 L360 230.2 L368 236.3 L376 242.2 L384 247.9 L392 253.4 L400 258.6 L408 263.4 L416 268.0 L424 272.1 L432 275.9 L440 279.3 L448 282.4 L456 285.1 L464 287.5 L472 289.5 L480 291.3" class="motif-curve-alt" />
+            <path d="M40 299.9 L48 299.8 L56 299.7 L64 299.5 L72 299.3 L80 298.8 L88 298.1 L96 297.1 L104 295.7 L112 293.6 L120 290.8 L128 286.9 L136 281.9 L144 275.4 L152 267.3 L160 257.4 L168 245.5 L176 231.8 L184 216.4 L192 199.5 L200 181.7 L208 163.5 L216 145.8 L224 129.2 L232 114.7 L240 103.0 L248 94.8 L256 90.5 L264 90.5 L272 94.8 L280 103.0 L288 114.7 L296 129.2 L304 145.8 L312 163.5 L320 181.7 L328 199.5 L336 216.4 L344 231.8 L352 245.5 L360 257.4 L368 267.3 L376 275.4 L384 281.9 L392 286.9 L400 290.8 L408 293.6 L416 295.7 L424 297.1 L432 298.1 L440 298.8 L448 299.3 L456 299.5 L464 299.7 L472 299.8 L480 299.9" class="motif-curve" />
+            <path d="M260 90 V300 M204 300 v6 M316 300 v6 M260 300 v6" class="motif-guide" />
+            <text x="260" y="324" class="motif-label" text-anchor="middle">μ</text>
+            <text x="204" y="324" class="motif-label" text-anchor="middle">−σ</text>
+            <text x="316" y="324" class="motif-label" text-anchor="middle">+σ</text>
+            <text x="276" y="78" class="motif-label">N(μ, σ²)</text>
+          </svg>
+
+          <div class="intro-text">
+            <p class="status"><span class="status-dot" aria-hidden="true"></span>Open to new roles</p>
+            <h1>I make complex data <em class="hl">useful, accessible, and actionable</em>.</h1>
+            <p class="lead">
+              I'm a data analyst and mathematics graduate working at the intersection of statistics, programming, and data visualization. I enjoy digging into complicated datasets, finding meaningful patterns, and building intuitive tools that make information easier to explore.
+            </p>
+            <div class="actions">
+              <a class="button" href="#work" data-analytics="hero-explore-work">See my work <span aria-hidden="true">→</span></a>
+              <a class="button button-ghost" href="resume.pdf" target="_blank" rel="noreferrer" data-analytics="hero-resume" data-analytics-type="download">Resume</a>
+            </div>
+          </div>
+        </section>
+
+        <section id="work" aria-labelledby="work-title">
+          <h2 id="work-title">Selected work</h2>
+
+          <div class="projects">
+            <article class="project project-featured">
+              <a class="project-preview" href="https://planning.maryland.gov/MSDC/Pages/6_economics/economic-census.aspx" target="_blank" rel="noreferrer" tabindex="-1" data-analytics="project-01-preview" data-analytics-type="project">
+                <img src="images/economic-census-explorer.png" alt="Screenshot of the Maryland Economic Census Explorer displaying a diverging bar chart of establishment changes by industry from 2017 to 2022." width="1397" height="827" loading="lazy" />
+              </a>
+              <div class="project-body">
+                <p class="meta">Interactive Data Application</p>
+                <h3><a href="https://planning.maryland.gov/MSDC/Pages/6_economics/economic-census.aspx" target="_blank" rel="noreferrer" data-analytics="project-01" data-analytics-type="project">Maryland Economic Census Explorer <span class="arrow" aria-hidden="true">↗</span></a></h3>
+                <p>Built an interactive application to explore changes in Maryland's economy between 2017 and 2022, combining industry and geographic comparisons with inflation-adjusted indicators and downloadable data.</p>
+                <ul class="tools" aria-label="Tools">
+                  <li>Python</li><li>JavaScript</li><li>Data Visualization</li><li>Census Bureau</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project">
+              <a class="project-preview" href="https://educational-attainment-1198bd.gitlab.io/" target="_blank" rel="noreferrer" tabindex="-1" data-analytics="project-02-preview" data-analytics-type="project">
+                <img src="images/educational-attainment.png" alt="Choropleth map of Maryland showing the percentage of adults aged 25 and older with a bachelor's degree or higher by county, using shades of blue. A summary panel displays statewide statistics and county-level comparisons." width="1397" height="806" loading="lazy" />
+              </a>
+              <p class="meta">Statistical Research and Interpretation</p>
+              <h3><a href="https://educational-attainment-1198bd.gitlab.io/" target="_blank" rel="noreferrer" data-analytics="project-02" data-analytics-type="project">Educational Attainment and Well-Being in Maryland <span class="arrow" aria-hidden="true">↗</span></a></h3>
+              <p>An exploratory research project examining how educational attainment relates to socioeconomic and well-being outcomes across Maryland. Combined statistical analysis, geographic comparisons, and interactive visualizations to investigate patterns and communicate findings.</p>
+              <ul class="tools" aria-label="Tools">
+                <li>ACS</li><li>Regression Analysis</li><li>Geospatial Analysis</li><li>Literature Review</li>
+              </ul>
+            </article>
+
+            <article class="project">
+              <a class="project-preview" href="https://app.powerbi.com/view?r=eyJrIjoiM2ExZjhlMzUtN2EyZS00MTI3LWIzODYtOGM4N2FjNTk0NjAzIiwidCI6ImE1ZjQ2NGNmLWY4NjUtNGE2Mi04YzQzLTU0YTVjZWJjYmViNiJ9" target="_blank" rel="noreferrer" tabindex="-1" data-analytics="project-03-preview" data-analytics-type="project">
+                <img src="images/goodreads.png" alt="Screenshot of a Power BI dashboard analyzing Goodreads Best Books of 2025, featuring summary statistics, a bar chart of the most-rated books, and a scatterplot comparing popularity with average ratings." width="1385" height="822" loading="lazy" />
+              </a>
+              <p class="meta">Power BI and Data Storytelling</p>
+              <h3><a href="https://app.powerbi.com/view?r=eyJrIjoiM2ExZjhlMzUtN2EyZS00MTI3LWIzODYtOGM4N2FjNTk0NjAzIiwidCI6ImE1ZjQ2NGNmLWY4NjUtNGE2Mi04YzQzLTU0YTVjZWJjYmViNiJ9" target="_blank" rel="noreferrer" data-analytics="project-03" data-analytics-type="project">Goodreads Best Books of 2025 <span class="arrow" aria-hidden="true">↗</span></a></h3>
+              <p>Built an end-to-end analytics project using Python to scrape, clean, and analyze 500+ Goodreads book records, then developed an interactive Power BI dashboard exploring ratings, popularity, and reading trends.</p>
+              <ul class="tools" aria-label="Tools">
+                <li>Python</li><li>Web Scraping</li><li>Data Cleaning</li><li>Power BI</li>
+              </ul>
+            </article>
+
+            <article class="project">
+              <div class="project-preview">
+                <img src="images/municipal-projections.png" alt="Line chart comparing the mean absolute error of five municipal population projection methods over forecast horizons of 1 to 21 years. Errors generally increase with longer horizons, while the constant-ratio method tends to have lower errors at longer horizons." width="1089" height="590" loading="lazy" />
+              </div>
+              <p class="meta">Statistical Modeling and Automation · Internal</p>
+              <h3>Municipal Population Projections</h3>
+              <p>Developed an automated population projection workflow for 157 Maryland municipalities, evaluating 50,000+ model runs across multiple methods and implementing validation checks to maintain consistency with county-level projections.</p>
+              <ul class="tools" aria-label="Tools">
+                <li>Python</li><li>Statistical Modeling</li><li>Model Evaluation</li><li>Automation</li>
+              </ul>
+            </article>
+
+            <article class="project">
+              <a class="project-preview" href="https://public.tableau.com/app/profile/souha.alioua/viz/MathGraduatesDashboard/Overview" target="_blank" rel="noreferrer" tabindex="-1" data-analytics="project-05-preview" data-analytics-type="project">
+                <img src="images/math-graduates.png" alt="Screenshot of a Tableau dashboard exploring career outcomes for U.S. mathematics graduates, featuring employment and earnings statistics, a comparison of median wages across college majors, and employment-status distributions." width="1385" height="822" loading="lazy" />
+              </a>
+              <p class="meta">Independent · Labor Market Analysis</p>
+              <h3><a href="https://public.tableau.com/app/profile/souha.alioua/viz/MathGraduatesDashboard/Overview" target="_blank" rel="noreferrer" data-analytics="project-05" data-analytics-type="project">Mathematics Graduates: Careers and Earnings <span class="arrow" aria-hidden="true">↗</span></a></h3>
+              <p>Analyzed ACS/IPUMS microdata using SQL and Python to investigate employment, earnings, and career outcomes among U.S. mathematics and statistics graduates. Developed an interactive Tableau dashboard to visualize patterns across occupations and demographic groups.</p>
+              <ul class="tools" aria-label="Tools">
+                <li>SQL</li><li>Python</li><li>Tableau</li><li>ACS/IPUMS</li>
+              </ul>
+              <a class="code-link" href="https://github.com/aliouas/math-graduates" target="_blank" rel="noreferrer" data-analytics="project-05-code" data-analytics-type="project">View code ↗</a>
+            </article>
+          </div>
+        </section>
+
+        <section id="experience" aria-labelledby="experience-title">
+          <h2 id="experience-title">Professional Experience</h2>
+          <div class="role">
+            <div class="role-head">
+              <h3>Planner II / Data Analyst</h3>
+              <p class="date">Feb 2025 – Present</p>
+            </div>
+            <p class="role-org">Maryland Department of Planning · State Data &amp; Analysis Center</p>
+            <ul>
+              <li>Develop automated pipelines to collect, transform, validate, and analyze demographic, economic, and Census data.</li>
+              <li>Build interactive dashboards, geospatial visualizations, and web applications that make complex datasets accessible to technical and nontechnical audiences.</li>
+              <li>Conduct statistical analysis and population modeling to support research, planning, and data-informed decision-making.</li>
+              <li>Collaborate with interdisciplinary teams and stakeholders to translate analytical requirements into practical data products.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="skills" aria-labelledby="skills-title">
+          <h2 id="skills-title">Skills</h2>
+          <dl class="skills">
+            <div class="skill">
+              <dt>
+                <svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 3v18h18"/><circle cx="8" cy="15" r="1"/><circle cx="11" cy="10" r="1"/><circle cx="14" cy="13" r="1"/><circle cx="17" cy="7" r="1"/><circle cx="19" cy="11" r="1"/></svg>
+                Statistical Analysis &amp; Modeling
+              </dt>
+              <dd>Regression analysis, forecasting, model evaluation, exploratory data analysis</dd>
+            </div>
+            <div class="skill">
+              <dt>
+                <svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>
+                Programming &amp; Data Engineering
+              </dt>
+              <dd>Python, SQL, JavaScript, Pandas, NumPy, APIs, ETL pipelines, data validation</dd>
+            </div>
+            <div class="skill">
+              <dt>
+                <svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 21v-5M9 21v-8M14 21v-6M19 21V9"/><path d="M3 11l6-5 5 3 7-6"/></svg>
+                Visualization &amp; BI
+              </dt>
+              <dd>Tableau, Power BI, Plotly, ArcGIS Pro / Online, dashboard development</dd>
+            </div>
+            <div class="skill">
+              <dt>
+                <svg class="skill-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg>
+                Development &amp; Collaboration
+              </dt>
+              <dd>HTML/CSS, Git, GitHub/GitLab, technical documentation, stakeholder communication</dd>
+            </div>
+          </dl>
+        </section>
+
+        <section id="contact" aria-labelledby="contact-title">
+          <div class="contact-card">
+            <h2 id="contact-title">Contact</h2>
+            <p class="contact-big">Let’s make some data <em>useful</em>.</p>
+            <p>I'm always interested in opportunities to solve interesting problems, explore new ideas, and build things that make a difference. Have something in mind? I'd love to hear about it.</p>
+            <ul class="contact-links">
+              <li><a class="button" href="mailto:souhaalioua2@gmail.com" data-analytics="contact-email" data-analytics-type="contact">souhaalioua2@gmail.com</a></li>
+              <li><a class="button button-ghost" href="https://github.com/aliouas" target="_blank" rel="noreferrer" data-analytics="contact-github" data-analytics-type="social">GitHub ↗</a></li>
+              <li><a class="button button-ghost" href="https://www.linkedin.com/in/souha-alioua/" target="_blank" rel="noreferrer" data-analytics="contact-linkedin" data-analytics-type="social">LinkedIn ↗</a></li>
+            </ul>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>© <span id="year">2026</span> Souha Alioua</p>
+      </footer>
+    </div>
   </body>
 </html>
